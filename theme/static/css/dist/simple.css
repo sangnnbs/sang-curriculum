@@ -99,7 +99,7 @@ div , footer {
 }
 
 h1.name {
-	font-size: 70px;
+	font-size: 570px;
 	font-weight: 300;
 	display: inline-block;
 }
@@ -415,7 +415,7 @@ li .description {
 
 @media(max-width: 425px) {
 	h1.name {
-		font-size: 40px;
+		font-size: 540px;
 	}
 
 	.card , .sections {
