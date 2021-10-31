@@ -15,6 +15,7 @@ import os
 import django_heroku
 import mimetypes
 
+
 # Add mimetypes for CSS
 mimetypes.add_type("text/css", ".css", True)
 
@@ -31,7 +32,7 @@ SECRET_KEY = 'django-insecure-cmdl3aw=v@$@&^v_p%rmb*z@st&r&po0)k*sebwmki0=&w0@8v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -102,13 +103,19 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql-flexible-69024',
+        'USER': 'izdsrajtsmezqe',
+        'PASSWORD': 'c567338194a5673c1e1b3ec6140d3c0c9e37bd008df2d72b232f7698c46b5e85',
+        'HOST': 'ec2-3-219-103-45.compute-1.amazonaws.com',
+        'PORT':  '5432'
     }
 }
+
+
 
 
 # Password validation
@@ -202,3 +209,8 @@ COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] =  dj_database_url.config(default='postgres://izdsrajtsmezqe:c567338194a5673c1e1b3ec6140d3c0c9e37bd008df2d72b232f7698c46b5e85@ec2-3-219-103-45.compute-1.amazonaws.com:5432/d8fe7a64ish5lk')
