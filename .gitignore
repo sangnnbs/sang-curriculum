@@ -308,3 +308,5 @@ modules.xml
 # Cython debug symbols
 
 # End of https://www.toptal.com/developers/gitignore/api/python,django,pycharm+all
+staticfiles/css/dist/simple.css
+staticfiles/staticfiles.json
