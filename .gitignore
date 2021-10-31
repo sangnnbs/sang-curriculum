@@ -29,7 +29,7 @@ media
 .Python
 build/
 develop-eggs/
-*.css.*
+staticfiles/css/dist/*css*
 downloads/
 eggs/
 .eggs/
