@@ -852,12 +852,20 @@ select {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
 
 .table {
   display: table;
+}
+
+.flow-root {
+  display: flow-root;
 }
 
 .contents {
