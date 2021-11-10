@@ -34,8 +34,7 @@
 				</div>
 				<div class="unit-80">
 					<p style="padding: 1px; font-size: 20px; line-height: 30px">
-						Programming is even more common everyday, gives a great view of technologies among places we’re living. 
-						Got interested in Python, I steadily land a first step in Web Development using Django Framework.
+						{{ profile.bio }}
 					</p>
 				</div>
 			</div>
@@ -51,7 +50,7 @@
 				  <th>
 					<ul class="skill-list list-flat">
 						<li>Name</li>
-						<li>NGUYEN NHU BAO SANG</li>
+						<li>{{ profile.name }}</li>
 					</ul>
 				  </th>
 
@@ -59,7 +58,7 @@
 					<ul class="skill-list list-flat">
 						<li> <i class="fa fa-mobile" aria-hidden="true"></i> Phone number 
 						</li>
-						<li>+84 971502320</li>
+						<li>{{ profile.phone_number }}</li>
 					</ul>
 				  </th>
 
@@ -69,13 +68,13 @@
 						<ul class="skill-list list-flat">
 							<li><i class="fa fa-envelope" aria-hidden="true"></i> Email 
 							</li>
-							<li>nguyennhubaosang@gmail.com</li>
+							<li>{{ profile.email }}</li>
 						</ul>
 					  </th>
 					  <th>
 						<ul class="skill-list list-flat">
 							<li><i class="fa fa-github"></i>Github    </li>
-							<li><a href="https://github.com/sangnnbs">https://github.com/sangnnbs </a></li>
+							<li><a href="{{ profile.github }}">{{ profile.github }} </a></li>
 						</ul>
 					  </th>
 				</tr>
