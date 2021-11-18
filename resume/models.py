@@ -15,3 +15,9 @@ class Profile(models.Model):
     project1 = models.TextField(null=True)
     project2 = models.TextField(null=True)
     
+class Skill(models.Model):
+    programming_language = models.CharField(max_length=100, default='None')
+    tool = models.CharField(max_length=100)
+    database = models.CharField(max_length=100, default='None')
+    others = models.CharField(max_length=100, default='None')
+        
