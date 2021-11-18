@@ -92,12 +92,9 @@
 					<th style="width: 40%;">
 						<ul class="skill-list list-flat">
 							<li>Project 1</li>
-							<li> <a href="https://sangcv.herokuapp.com/profile">
+							<li> <a href="{{ profile.project_link1 }}">
 								My Curriculum Vitae </a>
-								<li>Backend: Django Framework</li>
-								<li>Frontend: HTML, CSS</li>
-								<li>Development Platform: Heroku</li>
-								<li></li>
+							<li>{{ profile.project1 }}</li>
 							</li>
 
 						</ul>
@@ -105,12 +102,9 @@
 					  <th>
 						<ul class="skill-list list-flat">
 							<li>Project 2</li>
-							<li> <a href="https://github.com/sangnnbs/speechtest">
+							<li> <a href="{{ profile.project_link2 }}">
 								Vocal Dictionary </a>
-								<li>Backend: Python</li>
-								
-								<li>Usage: Show Definitions and Types of Word with Oxford API and Speech Converter</li>
-								<li></li>
+								<li>{{ profile.project2 }}</li>
 							</li>
 
 						</ul>
