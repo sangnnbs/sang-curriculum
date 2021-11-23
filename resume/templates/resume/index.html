@@ -7,15 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 	<link rel="stylesheet" href="{% static 'css/dist/dracon-css/kube.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/dist/dracon-css/font-awesome.min.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/dist/dracon-css/custom.css' %}" />
-	
-<!--<link rel="stylesheet" href="css/kube.css" />  
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="shortcut icon" href="img/favicon.png" />            -->
-	
+		
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
@@ -23,7 +19,6 @@
 </head>
 <body>
 	<!--Header-->
-
 	
 	<!-- Introduction -->
 	<div class="intro section" id="about">
@@ -33,7 +28,7 @@
 					<img src="{% static 'css/dist/img/myava.jpg' %}" alt="Avatar" style="width:70px;height:100px;" >
 				</div>
 				<div class="unit-80">
-					<p style="padding: 1px; font-size: 20px; line-height: 30px">
+					<p style="padding: 1px; font-size: 18px; line-height: 30px">
 						{{ profile.bio }}
 					</p>
 				</div>
@@ -47,7 +42,7 @@
 			<h3>About Me</h3>
 			<table >
 				<tr>
-				  <th>
+				  <th style="width: 40%;">
 					<ul class="skill-list list-flat">
 						<li>Name</li>
 						<li>{{ profile.name }}</li>
@@ -73,7 +68,7 @@
 					  </th>
 					  <th>
 						<ul class="skill-list list-flat">
-							<li><i class="fa fa-github"></i>Github    </li>
+							<li><i class="fa fa-github"></i> Github</li>
 							<li><a href="{{ profile.github }}">{{ profile.github }} </a></li>
 						</ul>
 					  </th>
@@ -98,8 +93,8 @@
 							</li>
 
 						</ul>
-					  </th>
-					  <th>
+					</th>
+					<th>
 						<ul class="skill-list list-flat">
 							<li>Project 2</li>
 							<li> <a href="{{ profile.project_link2 }}">
@@ -108,22 +103,22 @@
 							</li>
 
 						</ul>
-					  </th>
+					</th>
 				</tr>
 				<tr>
-				  <th>
+				    <th>
 					<ul class="skill-list list-flat">
 						<li>Programming Language</li>
 						<li>{{ skill.programming_language }}</li>
 					</ul>
-				  </th>
+				    </th>
 
-				  <th>
+				    <th>
 					<ul class="skill-list list-flat">
 						<li>Tools</li>
 						<li>{{ skill.tool }}</li>
 					</ul>
-				  </th>
+				    </th>
 
 				</tr>
 				<tr>
