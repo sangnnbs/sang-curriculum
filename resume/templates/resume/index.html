@@ -14,8 +14,8 @@
 		
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-
-	
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=PT+Sans+Narrow&display=swap" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet"> 
 </head>
 <body>
 	<!--Header-->
@@ -28,7 +28,7 @@
 					<img src="{% static 'css/dist/img/myava.jpg' %}" alt="Avatar" style="width: 6rem;height: 9rem;" >
 				</div>
 				<div class="unit-80">
-					<p style="padding: 1px; font-size: 17px; line-height: 35px; text-align: right; margin-top: 20px">
+					<p style="padding: 1px; font-size: 18px; line-height: 35px; text-align: right; margin-top: 20px">
 						{{ profile.bio }}
 					</p>
 				</div>
@@ -45,7 +45,8 @@
 				  <th style="width: 40%;">
 					<ul class="skill-list list-flat">
 						<li>Name</li>
-						<li>{{ profile.name }}</li>
+						<li style="font-family: 'Arimo', sans-serif;">{{ profile.name }}</li>
+						<li style="font-family: 'PT Sans Narrow', sans-serif;">DoB - May 1995</li>
 					</ul>
 				  </th>
 

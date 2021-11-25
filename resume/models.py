@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 # Create your models here.
 
 class Profile(models.Model):
@@ -7,7 +7,8 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=30)
     email = models.EmailField()
     github = models.CharField(max_length=100)
-    bio = models.CharField(max_length=500)
+    bio = models.TextField(null=True)
+    
     avatar = models.CharField(max_length=100)
     facebook = models.CharField(max_length=100)
     project_link1 = models.CharField(max_length=100, blank=True)
