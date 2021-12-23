@@ -20,8 +20,8 @@ import mimetypes
 mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cmdl3aw=v@$@&^v_p%rmb*z@st&r&po0)k*sebwmki0=&w0@8v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,9 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'quickapi',
     'tailwind',
     'theme',
     'resume',
+    'blog'
+
 ]
 #----------------TAILWIND REGISTER---------
 TAILWIND_APP_NAME = 'theme'
@@ -155,6 +159,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
@@ -208,7 +215,8 @@ COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-
-# import dj_database_url
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-# DATABASES['default'] =  dj_database_url.config(default='postgres://izdsrajtsmezqe:c567338194a5673c1e1b3ec6140d3c0c9e37bd008df2d72b232f7698c46b5e85@ec2-3-219-103-45.compute-1.amazonaws.com:5432/d8fe7a64ish5lk')
+# RESTFUL API
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
